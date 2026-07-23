@@ -1,0 +1,22 @@
+{
+    "robloxLsp.diagnostics.globals": [
+        "getgenv",
+        "isfolder",
+        "makefolder",
+        "isfolder",
+        "getcustomasset",
+        "writefile",
+        "isfile",
+        "listfiles",
+        "delfile",
+        "readfile",
+        "identifyexecutor",
+        "loadfile",
+        "run_on_thread",
+        "getactorthreads",
+        "getrenv"
+    ],
+    "robloxLsp.diagnostics.disable": [
+        "undefined-global"
+    ]
+}
