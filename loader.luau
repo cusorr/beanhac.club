@@ -1,6 +1,6 @@
 local Executor = identifyexecutor and identifyexecutor():lower() or ""
 if not Executor:find("potassium") and not Executor:find("volt") then
-    return warn("Unsupport executor!")
+    return warn("Unsupported executor!")
 end
 
 if game.GameId == 113491250 then -- PF

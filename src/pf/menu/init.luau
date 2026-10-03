@@ -1,4 +1,4 @@
-local Library = loadfile("beanhac.club/libs/library.luau")()
+local Library = loadfile("beanhac.club/libs/linoria.luau")()
 
 local Window = Library:CreateWindow({
     Title = "beanhac.club | Phantom Forces",
@@ -163,12 +163,12 @@ local Visuals = Window:AddTab("Visuals") do
 
             Local:AddToggle("Visuals/Local/Viewmodel/Enabled", {Text = "Viewmodel Offset"})
             Local:AddSlider("Visuals/Local/Viewmodel/X", {Text = "X", Min = -10, Max = 10, Default = 0, Rounding = 1, Suffix = "st"})
-                :AddSlider("Visuals/Local/Viewmodel/Y", {Text = "Y", Min = -10, Max = 10, Default = 0, Rounding = 1, Suffix = "st"})
-                :AddSlider("Visuals/Local/Viewmodel/Z", {Text = "Z", Min = -10, Max = 10, Default = 0, Rounding = 1, Suffix = "st"})
+            Local:AddSlider("Visuals/Local/Viewmodel/Y", {Text = "Y", Min = -10, Max = 10, Default = 0, Rounding = 1, Suffix = "st"})
+            Local:AddSlider("Visuals/Local/Viewmodel/Z", {Text = "Z", Min = -10, Max = 10, Default = 0, Rounding = 1, Suffix = "st"})
         
             Local:AddSlider("Visuals/Local/Viewmodel/Pitch", {Text = "Pitch", Min = -90, Max = 90, Default = 0, Rounding = 0, Suffix = "°"})
-                :AddSlider("Visuals/Local/Viewmodel/Yaw", {Text = "Yaw", Min = -90, Max = 90, Default = 0, Rounding = 0, Suffix = "°"})
-                :AddSlider("Visuals/Local/Viewmodel/Roll", {Text = "Roll", Min = -90, Max = 90, Default = 0, Rounding = 0, Suffix = "°"})
+            Local:AddSlider("Visuals/Local/Viewmodel/Yaw", {Text = "Yaw", Min = -90, Max = 90, Default = 0, Rounding = 0, Suffix = "°"})
+            Local:AddSlider("Visuals/Local/Viewmodel/Roll", {Text = "Roll", Min = -90, Max = 90, Default = 0, Rounding = 0, Suffix = "°"})
         end
 
         local Camera = LocalBox:AddTab("Camera") do
@@ -178,8 +178,8 @@ local Visuals = Window:AddTab("Visuals") do
 
             Camera:AddLabel("Thirdperson Offset")
             Camera:AddSlider("Visuals/Camera/Thirdperson/X", {Text = "X", Min = -10, Max = 10, Default = 0, Rounding = 1, Suffix = "st"})
-                :AddSlider("Visuals/Camera/Thirdperson/Y", {Text = "Y", Min = -10, Max = 10, Default = 0, Rounding = 1, Suffix = "st"})
-                :AddSlider("Visuals/Camera/Thirdperson/Z", {Text = "Z", Min = -10, Max = 10, Default = 0, Rounding = 1, Suffix = "st"})
+            Camera:AddSlider("Visuals/Camera/Thirdperson/Y", {Text = "Y", Min = -10, Max = 10, Default = 0, Rounding = 1, Suffix = "st"})
+            Camera:AddSlider("Visuals/Camera/Thirdperson/Z", {Text = "Z", Min = -10, Max = 10, Default = 0, Rounding = 1, Suffix = "st"})
 
             Camera:AddDivider()
             
@@ -265,6 +265,8 @@ local Settings = Window:AddTab("Settings") do
     end
 
     local Config = Settings:AddRightGroupbox("Config") do
+        makefolder("beanhac.club/configs/pf")
+
         local function RefreshList()
             local Names = {}
 
